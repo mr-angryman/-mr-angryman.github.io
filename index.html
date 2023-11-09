@@ -1,0 +1,59 @@
+<html>
+
+  <head>
+    <title>0 - Avocado Clicker</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Avocado Clicker is a single-developed game inspired by cookie clicker.">
+    <meta name="author" content="angryman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Avocado, Clicker, avocado Clicker, clickergame">
+  </head>
+
+  <body>
+    <div class="parent-container">
+      <div class="container">
+        <h4 class="title">Avocados Clicker</h4>
+        <button id="click" type="button" class="click"><img class="click-image" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Avocado_Icon.png" height="20%" width="20%" alt="YOU FOUND AN EASTER AVOCADO" /></button>
+        <div class="number-click-div" id="number-click-div"></div>
+        <hr>
+        <p>
+          <h class="cursive">Avocados: </h><span class="cursive" id="total_clicks">0</span><br />
+          <h class="cursive">Avocados per </h><small id="time_period" class="cursive">1.00</small>
+          <h class="cursive">second: </h><span class="cursive" id="clicks_per_second">0</span><br />
+          <h class="cursive">Harvest Value: </h><span class="cursive" id="click_level">1 avocados per click</span>
+        </p>
+        <hr />          
+        <h3>Buy</h3>
+        <table class="table" align="center">
+          <tr>
+            <td class="cursive">Automatic Avocados Harvest Machine</td>
+            <td><span class="cursive" id="autoclicker_level">lvl 0</span></td>
+            <td><button id="buy_click" type="button" class="btn btn-success">Buy for 1</button></td>
+          </tr>
+          <tr>
+            <td class="cursive">Speed up the harvest machine by 10%</td>
+            <td><span class="cursive" id="speed_level">lvl 0</span></td>
+            <td><button id="upgrade_speed" type="button" class="btn btn-success">Buy for 100</button></td>
+          </tr>
+          <tr>
+            <td class="cursive">Increase Harvest Value</td>
+            <td></td>
+            <td><button id="increase_clicks" type="button" class="btn btn-success">Buy for 15</button></td>
+          </tr>
+        </table>
+        <hr>
+        <h3>Saving</h3>
+        <button style="width:80px" class="button save" id="save" onclick="save();"><img width="20%" height="20%" src="https://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/Save-icon.png"> Save</button>
+        <button style="width:80px" class="button load" id="load" onclick="load();"><img width="20%" height="20%" src="https://cdn-icons-png.flaticon.com/512/14/14426.png"> Load</button>
+        <button style="width:80px" class="button reset" id="reset" onclick="reset();"><img width="20%" height="20%" src="https://www.pngall.com/wp-content/uploads/12/Restart-Symbol-PNG.png"> Reset</button><br><br>
+
+        <button class="button export" id="export" onclick="exportSave();">Export</button>
+        <button class="button import" id="import" onclick="importSave();">Import</button>
+        <h6>Game will save every <span id="saveValue">10</span> seconds.</h6>
+        <input id="saveInput" type="range" min="5" max="30" step="1">
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+
+</html>
