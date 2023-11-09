@@ -7,6 +7,12 @@ var upgrade_speed = 0; //the level of the speed up upgrade
 var click_rate = 1000; //ms between each autoclick
 var interval_auto; //storing our interval here so we can update it
 var click_increment = 1; //how many clicks per click
+var rebirth_count = 0;
+var rebirth_points = 0;
+var rebirth_point_rec = 10; // updated
+var noc = true;
+
+var r_up_multi_cost = 1
 //functions
 
 function update_total_clicks() { //updates the number of clicks   
@@ -32,15 +38,17 @@ var achievements = {
   name: [
     "Keep it Up!",
     "Thats a lot of clicks!",
-    "You've came a long way!"
+    "You've came a long way!",
+    "Wowza!"
   ],
   description: [
     "You've clicked 100 times!",
-    "You've clicked 1000 times!",
-    "You've clicked 25000 times!",
+    "You've clicked 1,000 times!",
+    "You've clicked 2,500 times!",
+    "You've clicked 10,000 times!"
   ],
-  requirement: [100, 1000, 25000],
-  achieved: [0, 0, 0]
+  requirement: [100, 1000, 2500, 10000],
+  achieved: [0, 0, 0, 0]
 }
 
 function update_workers() {
@@ -57,7 +65,9 @@ function update_workers() {
 document.getElementById("click").addEventListener("click", function(event) {
   clicks = parseFloat(clicks) + parseFloat(click_increment);
   update_total_clicks(); //updates the text
-  createNumbersOnClick();
+  if (noc == true) {
+    createNumbersOnClick();
+  }
 }, false);
 
 
@@ -283,16 +293,46 @@ function achievement(id) {
 
 
 setInterval(function() {
-  if (clicks == 100) {
+  if (clicks == 1000) {
     achievement(1);
   } else if (clicks == 1000) {
     achievement(2);
-  } else if (clicks == 25000) {
+  } else if (clicks == 2500) {
     achievement(3);
   }
 }, 1);
 
-
-var upgrade = {
-	
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+setInterval(function() {
+  document.getElementById("more_rebirth").innerHTML = numberWithCommas(rebirth_point_rec - clicks);
+  document.getElementById("rebirth_points_count").innerHTML = rebirth_points;
+  document.getElementById("rebirth_requirement").innerHTML = rebirth_point_rec;
+}, 5);
+
+function rebirth() {
+  if (clicks >= rebirth_point_rec) {
+  	clicks = 0;
+    click_increment = 0;
+    rebirth_points++;
+    rebirth_count++;
+  }
+}
+
+function checkclick() {
+if (document.getElementById("noccheck").checked == true) {
+  	noc = true;
+  } else if (document.getElementById("noccheck").checked = false) {
+  noc = false;
+  }
+}
+
+
+document.getElementById("r_buy_upgrade_multiplier").addEventListener("click", function() {
+	if (rebirth_points >= r_up_multi_cost) {
+  	rebirth_points -= r_up_multi_cost;
+    
+  }
+});
