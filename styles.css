@@ -156,3 +156,16 @@
    animation: neonAnim 2s alternate-reverse infinite;
    color: white;
  }
+
+ .cursive.low-padding {
+   padding: 1px;
+ }
+
+.cover{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: 999;
+}
+
