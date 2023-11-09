@@ -1,0 +1,158 @@
+ :root {
+   --border-w: 0.25rem;
+   --border-r: 1em;
+   --angle: 130deg;
+ }
+
+
+ .container {
+   padding: 5px 30px 30px 30px;
+   margin: 30px;
+   border: solid white 1px;
+   border-radius: 5px;
+   text-align: center;
+   background: transparent;
+ }
+
+ body {
+   background: linear-gradient(308deg, #05f10b, #03a906, #35f538);
+   background-size: 180% 180%;
+   animation: gradient-animation 21s ease infinite;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+ .button.reset {
+   color: red;
+   font-weight: bold;
+ }
+
+ .button {
+   border-radius: 10px;
+   color: white;
+   border: 2px solid #55c75c;
+   background: #39b249;
+   font-size: 15px;
+   padding: 3px;
+   font-weight: normal;
+ }
+
+ h6 {
+   font-size: 12px;
+   font-weight: normal;
+   margin: 10px;
+ }
+
+
+ .click {
+   text-decoration: none;
+   font-weight: bold;
+   line-height: 1;
+   grid-column: 1;
+   backface-visibility: hidden;
+   padding: 0.725em 1.25em 0.8em;
+   box-shadow: 0 0.05em 0.5em rgba(4, 159, 108, 1), 0 0.15em 0.3em -0.1em rgba(194, 254, 113, 1), inset 0 0 0.05em 0.0333em rgba(4, 159, 108, 1), inset 0 0.1em 0.2em 0em rgba(194, 254, 113, 1), inset 0 0.1em 0.45em rgba(4, 159, 108, 1);
+   background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+   color: white;
+   transition: color 0.3s, background 0.3s, transform 0.75s, background-position 0.5s, box-shadow 0.5s;
+   will-change: background-position, transform, box-shadow;
+   position: relative;
+   border-radius: var(--border-r);
+
+ }
+
+ #click>.number {
+   z-index: 99;
+   font-size: 18px;
+   color: white;
+   position: absolute;
+ }
+
+ #click:hover {
+   transform: scale(1.1);
+ }
+
+ #click:active {
+   transform: scale(0.99);
+ }
+
+
+ .number-click-div {
+   font-size: 20px;
+   font-weight: bold;
+   color: white;
+   position: absolute;
+   z-index: 99;
+ }
+
+ @-webkit-keyframes bounce {
+   0% {
+     transform: scale(1, 1) translate(0px, 0px);
+   }
+
+   30% {
+     transform: scale(1, 0.8) translate(0px, 10px);
+   }
+
+   75% {
+     transform: scale(1, 1.1) translate(0px, -25px);
+   }
+
+   100% {
+     transform: scale(1, 1) translate(0px, 0px);
+   }
+ }
+
+ .total_clicks {
+   -webkit-animation: bounce 0.75s infinite;
+ }
+
+ .btn {
+   border-radius: 10px;
+   color: white;
+   border: 2px solid #55c75c;
+   background: #39b249;
+   font-size: 15px;
+   padding: 3px;
+ }
+
+ .btn:hover {
+   transform: scale(1.05);
+ }
+
+ .btn:active {
+   transform: scale(0.99);
+ }
+
+ .title {
+   animation: neonAnim 2s alternate-reverse infinite;
+   color: #198E3A;
+   font-family: Cursive;
+   font-size: 28px;
+   font-weight: bold;
+   padding: 1px;
+   text-shadow: rgba(20, 163, 37, 0.9) 0px 0px 57px;
+ }
+
+ @keyframes neonAnim {
+   from {
+     text-shadow:
+       0 0 10px rgba(25, 142, 58, .7),
+       0 0 40px rgba(25, 142, 58, .7),
+       0 0 100px rgba(25, 142, 58, .7);
+   }
+
+   to {
+     text-shadow:
+       0 0 5px rgba(25, 142, 58, .7),
+       0 0 20px rgba(25, 142, 58, .7),
+       0 0 60px rgba(25, 142, 58, .7);
+   }
+ }
+
+ .cursive {
+   font-family: Cursive;
+   text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 57px;
+   animation: neonAnim 2s alternate-reverse infinite;
+   color: white;
+ }
