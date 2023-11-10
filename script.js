@@ -9,7 +9,7 @@ var interval_auto; //storing our interval here so we can update it
 var click_increment = 1; //how many clicks per click
 var rebirth_count = 0;
 var rebirth_points = 0;
-var rebirth_point_rec = 25000; // updated
+var rebirth_point_rec = 10; // updated
 var noc = true;
 
 var r_up_multi_cost = 1
