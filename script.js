@@ -311,6 +311,7 @@ setInterval(function() {
   document.getElementById("more_rebirth").innerHTML = numberWithCommas(rebirth_point_rec - clicks);
   document.getElementById("rebirth_points_count").innerHTML = rebirth_points;
   document.getElementById("rebirth_requirement").innerHTML = rebirth_point_rec;
+  document.title = clicks
 }, 5);
 
 function rebirth() {
