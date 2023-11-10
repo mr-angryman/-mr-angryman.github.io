@@ -170,8 +170,8 @@
  }
 
  .csoon {
-   width: 75%;
-   height: 10%;
+   width: 100%;
+   height: 100%;
    opacity: 80%;
    background-color: grey;
    position: absolute;
@@ -179,8 +179,8 @@
 
  .csoon-text {
    position: absolute;
-   left: 35%;
+   left: 50%;
    transform: rotate(-10deg);
    align-items: center;
-   top: 530%;
+   top: 50%;
  }
