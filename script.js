@@ -10,6 +10,7 @@ var click_increment = 1; //how many clicks per click
 var rebirth_count = 0;
 var rebirth_points = 0;
 var rebirth_point_rec = 10; // updated
+var rebirth_multiplier = 1
 var noc = true;
 
 var r_up_multi_cost = 1
@@ -63,7 +64,7 @@ function update_workers() {
 
 //click events
 document.getElementById("click").addEventListener("click", function(event) {
-  clicks = parseFloat(clicks) + parseFloat(click_increment);
+  clicks = parseFloat(clicks) + parseFloat(click_increment) * rebirth_multiplier;
   update_total_clicks(); //updates the text
   if (noc == true) {
     createNumbersOnClick();
@@ -314,7 +315,7 @@ setInterval(function() {
 
 function rebirth() {
   if (clicks >= rebirth_point_rec) {
-  	clicks = 0;
+    clicks = 0;
     click_increment = 0;
     rebirth_points++;
     rebirth_count++;
@@ -322,17 +323,17 @@ function rebirth() {
 }
 
 function checkclick() {
-if (document.getElementById("noccheck").checked == true) {
-  	noc = true;
+  if (document.getElementById("noccheck").checked == true) {
+    noc = true;
   } else if (document.getElementById("noccheck").checked = false) {
-  noc = false;
+    noc = false;
   }
 }
 
 
 document.getElementById("r_buy_upgrade_multiplier").addEventListener("click", function() {
-	if (rebirth_points >= r_up_multi_cost) {
-  	rebirth_points -= r_up_multi_cost;
-    
+  if (rebirth_points >= r_up_multi_cost) {
+    rebirth_points -= r_up_multi_cost;
+    rebirth_multiplier = rebirth_multiplier * 2
   }
 });
