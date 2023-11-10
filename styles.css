@@ -15,11 +15,13 @@
  }
 
  body {
-   background: linear-gradient(308deg, #05f10b, #03a906, #35f538);
-   background-size: 180% 180%;
-   animation: gradient-animation 21s ease infinite;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
+   background: linear-gradient(91deg, #24b48f, #24b476, #2fce66, #16d550, #0a7b1d);
+   background-size: 1000% 1000%;
+
+   -webkit-animation: AnimationName 41s ease infinite;
+   -moz-animation: AnimationName 41s ease infinite;
+   -o-animation: AnimationName 41s ease infinite;
+   animation: AnimationName 41s ease infinite;
  }
 
  .button.reset {
@@ -161,11 +163,66 @@
    padding: 1px;
  }
 
-.cover{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: block;
-  z-index: 999;
-}
+ .cover {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   display: block;
+   z-index: 999;
+ }
 
+ @-webkit-keyframes AnimationName {
+   0% {
+     background-position: 0% 50%
+   }
+
+   50% {
+     background-position: 100% 50%
+   }
+
+   100% {
+     background-position: 0% 50%
+   }
+ }
+
+ @-moz-keyframes AnimationName {
+   0% {
+     background-position: 0% 50%
+   }
+
+   50% {
+     background-position: 100% 50%
+   }
+
+   100% {
+     background-position: 0% 50%
+   }
+ }
+
+ @-o-keyframes AnimationName {
+   0% {
+     background-position: 0% 50%
+   }
+
+   50% {
+     background-position: 100% 50%
+   }
+
+   100% {
+     background-position: 0% 50%
+   }
+ }
+
+ @keyframes AnimationName {
+   0% {
+     background-position: 0% 50%
+   }
+
+   50% {
+     background-position: 100% 50%
+   }
+
+   100% {
+     background-position: 0% 50%
+   }
+ }
