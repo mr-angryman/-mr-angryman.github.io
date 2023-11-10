@@ -7,7 +7,7 @@
     <meta name="author" content="angryman">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Avocado, Clicker, avocado Clicker, clickergame">
-      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
@@ -49,15 +49,18 @@
           <h6 class="cursive">You need <span id="more_rebirth" class="cursive">25,000</span> more points to rebirth.</h6>
           <button onclick="rebirth();" class="btn cursive" id="rebirth_button">Rebirth</button>
           <h5 class="cursive">You have <span id="rebirth_points_count" class="cursive">0</span> rebirth points.</h5>
-          <tr>
-            <td><h5 class="cursive">Upgrade Multiplier: <span id="r_upgrade_multiplier_cost">1</span> rebirth points</h5></td>
-            <td><button class="btn" id="r_buy_upgrade_multiplier">Buy</button></td>
-          </tr>
+        <tr>
+          <td>
+            <h5 class="cursive">Upgrade Multiplier: <span id="r_upgrade_multiplier_cost">1</span> rebirth points</h5>
+          </td>
+          <td><button class="btn" id="r_buy_upgrade_multiplier">Buy</button></td>
+        </tr>
         </tr>
         <hr>
         <div class="saving-div">
-          <div id="area" class="area"></div>
-          <div class="area cover"></div>
+          <div class="csoon"></div>
+          <h2 class="csoon-text">Comming Soon!</h2>
+          <br>
           <h3>Saving</h3>
           <button style="width:80px" class="button save" id="save" onclick="save();"><img width="20%" height="20%" src="https://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/Save-icon.png"> Save</button>
           <button style="width:80px" class="button load" id="load" onclick="load();"><img width="20%" height="20%" src="https://cdn-icons-png.flaticon.com/512/14/14426.png"> Load</button>
@@ -68,12 +71,12 @@
           <h6>Game will save every <span id="saveValue">10</span> seconds.</h6>
           <input id="saveInput" type="range" min="5" max="30" step="1">
           <br>
-          <input id="noccheck" onclick="checkclick()"checked type="checkbox">Numbers on click</input>
+          <input id="noccheck" onclick="checkclick()" checked type="checkbox">Numbers on click
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 
 </html>
